@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Médecins — DocChat Maroc</title>
+  <link rel="stylesheet" href="medecins.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="index.html">DocChat Maroc</a>
+    <nav class="filters">
+      <select id="spec"><option value="">Spécialité</option><option>Cardiologie</option><option>Dermatologie</option><option>Pédiatrie</option><option>Généraliste</option></select>
+      <input id="ville" type="text" placeholder="Ville (ex: Fès)" />
+      <input id="prix" type="number" min="50" max="600" step="10" placeholder="Prix max (MAD)" />
+      <button id="searchBtn" class="btn">Rechercher</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="results" id="results" aria-live="polite"></section>
+    <section id="avis" class="avis-section">
+      <h2>Avis récents</h2>
+      <div id="avisList" class="avis-list"></div>
+    </section>
+  </main>
+
+  <script src="medecins.js" defer></script>
+</body>
+</html>

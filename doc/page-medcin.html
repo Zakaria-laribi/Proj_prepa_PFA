@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mon profil médecin — DocChat Maroc</title>
+  <link rel="stylesheet" href="page-medcin.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Mon profil médecin</h1>
+    <p id="roleWarn" class="warn" hidden>Accès réservé aux médecins.</p>
+    <form id="medForm" class="grid">
+      <div class="field"><label>Nom</label><input id="nom" type="text" required /></div>
+      <div class="field"><label>Email</label><input id="email" type="email" required /></div>
+      <div class="field"><label>Spécialité</label><input id="spec" type="text" placeholder="Ex: Cardiologie" /></div>
+      <div class="field"><label>Prix consultation (MAD)</label><input id="prix" type="number" min="0" /></div>
+      <div class="field"><label>Description</label><textarea id="desc"></textarea></div>
+      <div class="field"><label>Disponibilité</label>
+        <select id="dispo"><option value="Disponible">Disponible</option><option value="Occupé">Occupé</option></select>
+      </div>
+      <button class="btn" type="submit">Enregistrer</button>
+    </form>
+  </main>
+  <script src="page-medcin.js" defer></script>
+</body>
+</html>
