@@ -1,0 +1,38 @@
+[
+  {
+    "medecinId": 1,
+    "patient": "Zakaria",
+    "note": 5,
+    "commentaire": "Très professionnelle et à l'écoute."
+  },
+  {
+    "medecinId": 2,
+    "patient": "Sara",
+    "note": 4,
+    "commentaire": "Bon diagnostic, attente un peu longue."
+  },
+  {
+    "medecinId": 3,
+    "patient": "Amine",
+    "note": 5,
+    "commentaire": "Super avec les enfants, je recommande."
+  },
+  {
+    "medecinId": 4,
+    "patient": "Noura",
+    "note": 3,
+    "commentaire": "Correct, mais peu disponible."
+  },
+  {
+    "medecinId": 5,
+    "patient": "Hicham",
+    "note": 5,
+    "commentaire": "Très compétente, suivi de grossesse impeccable."
+  },
+  {
+    "medecinId": 6,
+    "patient": "Fatima",
+    "note": 4,
+    "commentaire": "Bon neurologue, explications claires."
+  }
+]

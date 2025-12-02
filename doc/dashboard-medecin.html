@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tableau de bord — DocChat Maroc</title>
+  <link rel="stylesheet" href="dashboard-medecin.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Tableau de bord médecin</h1>
+    <p id="roleWarn" class="warn" hidden>Accès réservé aux médecins.</p>
+
+    <section class="grid">
+      <div class="card">
+        <h3>Profil</h3>
+        <p id="profil"></p>
+        <a class="btn" href="page-medcin.html">Modifier le profil</a>
+      </div>
+      <div class="card">
+        <h3>Planning</h3>
+        <ul id="planning" class="list"></ul>
+        <button id="addSlot" class="btn">Ajouter créneau</button>
+      </div>
+      <div class="card">
+        <h3>Historique de conversations</h3>
+        <ul id="history" class="list"></ul>
+        <a class="btn outline" href="chat.html?vue=medecin">Ouvrir le chat</a>
+      </div>
+      <div class="card">
+        <h3>Avis reçus</h3>
+        <ul id="avisList" class="list"></ul>
+      </div>
+    </section>
+  </main>
+  <script src="dashboard-medecin.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr" data-app="DocChat Maroc">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DocChat Maroc — Consultation médicale en ligne</title>
+    <meta name="description" content="DocChat Maroc — Plateforme de consultation médicale en ligne au Maroc." />
+    <meta name="theme-color" content="#0ea5a0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <header class="dc-header">
+      <nav class="dc-nav container" aria-label="Navigation principale">
+        <a class="dc-logo" href="./index.html" aria-label="DocChat Maroc Accueil">
+          <span class="logo-icon" aria-hidden="true">💙</span>
+          <span class="logo-text">DocChat Maroc</span>
+        </a>
+        <ul class="dc-menu" id="mainMenu">
+          <li><a href="./medecins.html">Médecins</a></li>
+          <li><a href="./pharmacies.html">Pharmacies</a></li>
+          <li><a href="./hopitaux.html">Hôpitaux</a></li>
+          <li><a href="./store.html">Boutique</a></li>
+          <li class="role-patient"><a href="./page-patient.html">Mon profil</a></li>
+          <li class="role-patient"><a href="./panier.html">Panier</a></li>
+          <li class="role-patient"><a href="./chat.html?vue=patient">Chat urgent</a></li>
+          <li class="role-medecin"><a href="./dashboard-medecin.html">Tableau de bord</a></li>
+          <li class="role-medecin"><a href="./page-medcin.html">Mon profil médecin</a></li>
+          <li class="role-medecin"><a href="./chat.html?vue=medecin">Chat urgent</a></li>
+        </ul>
+        <div class="dc-actions">
+          <a id="loginBtn" class="btn btn-outline" href="./login.html">Se connecter / S'inscrire</a>
+          <button id="notifBtn" class="icon-btn" aria-label="Notifications" title="Notifications" hidden>
+            🔔 <span class="badge" aria-label="Nouveaux">0</span>
+          </button>
+          <button id="userMenuBtn" class="avatar" aria-label="Menu utilisateur" hidden>
+            <span class="avatar-ring" aria-hidden="true"></span>
+            <span id="avatarInitials">DC</span>
+          </button>
+          <button id="burgerBtn" class="burger" aria-label="Ouvrir le menu">
+            <span class="burger-line"></span><span class="burger-line"></span><span class="burger-line"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <section class="dc-hero container">
+      <div class="hero-content">
+        <h1>Votre santé, partout au Maroc.</h1>
+        <p class="subtitle">Consultez en ligne, trouvez pharmacies de garde et hôpitaux proches, commandez vos médicaments.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="./medecins.html">Trouver un médecin</a>
+          <a class="btn btn-secondary" href="./chat.html">Chat urgent</a>
+        </div>
+        <div class="hero-stats" aria-label="Statistiques clés">
+          <div class="stat"><strong>1,200+</strong><span>Médecins certifiés</span></div>
+          <div class="stat"><strong>80+</strong><span>Villes couvertes</span></div>
+          <div class="stat"><strong>4.8/5</strong><span>Satisfaction</span></div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="card card-gradient"><div class="pulse"></div></div>
+      </div>
+    </section>
+
+    <section class="dc-search container">
+      <h2>Recherche rapide de médecins</h2>
+      <form id="quickSearchForm" class="search-grid" aria-label="Recherche de médecins">
+        <div class="field">
+          <label for="specSelect">Spécialité</label>
+          <select id="specSelect" name="specialite">
+            <option value="">Toutes</option>
+            <option value="Cardiologie">Cardiologie</option>
+            <option value="Dermatologie">Dermatologie</option>
+            <option value="Pédiatrie">Pédiatrie</option>
+            <option value="Généraliste">Généraliste</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="villeInput">Ville</label>
+          <input id="villeInput" name="ville" type="text" placeholder="Ex: Fès" />
+        </div>
+        <div class="field">
+          <label for="prixRange">Prix max (MAD)</label>
+          <input id="prixRange" name="prixMax" type="range" min="50" max="600" step="10" value="300" />
+          <small id="prixValue">300 MAD</small>
+        </div>
+        <div class="actions">
+          <button class="btn btn-primary" type="submit">Rechercher</button>
+          <a class="btn btn-link" href="./medecins.html">Recherche avancée</a>
+        </div>
+      </form>
+      <div id="quickResults" class="results-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="dc-features container">
+      <h2>Ce que vous pouvez faire</h2>
+      <div class="features-grid">
+        <article class="feature-card">
+          <div class="icon">👩‍⚕️</div><h3>Consulter des médecins</h3>
+          <p>Comparez spécialité, prix, ville. Profils et avis vérifiés.</p>
+          <a class="btn btn-outline" href="./medecins.html">Voir les médecins</a>
+        </article>
+        <article class="feature-card">
+          <div class="icon">💬</div><h3>Chat urgent</h3>
+          <p>Discutez instantanément et envoyez des images si nécessaire.</p>
+          <a class="btn btn-outline" href="./chat.html">Ouvrir le chat</a>
+        </article>
+        <article class="feature-card">
+          <div class="icon">🧪</div><h3>Boutique médicaments</h3>
+          <p>Commandez et suivez vos livraisons en temps réel.</p>
+          <a class="btn btn-outline" href="./store.html">Accéder à la boutique</a>
+        </article>
+        <article class="feature-card">
+          <div class="icon">🏥</div><h3>Pharmacies & hôpitaux</h3>
+          <p>Pharmacies de garde et hôpitaux proches en quelques secondes.</p>
+          <a class="btn btn-outline" href="./pharmacies.html">Voir les pharmacies</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="dc-cta container">
+      <div class="cta-card">
+        <div class="cta-content">
+          <h2>Prêt à commencer ?</h2>
+          <p>Créez votre compte et accédez aux consultations en ligne.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="./login.html">Créer un compte</a>
+          <a class="btn btn-secondary" href="./login.html?role=medecin">Je suis médecin</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="dc-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="dc-logo" href="./index.html"><span class="logo-icon">💙</span><span class="logo-text">DocChat Maroc</span></a>
+          <p class="footer-desc">Plateforme marocaine de consultation médicale en ligne — 24/7.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Patients</h4>
+          <ul>
+            <li><a href="./medecins.html">Trouver un médecin</a></li>
+            <li><a href="./chat.html?vue=patient">Chat urgent</a></li>
+            <li><a href="./store.html">Boutique</a></li>
+            <li><a href="./page-patient.html">Mon profil</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Médecins</h4>
+          <ul>
+            <li><a href="./dashboard-medecin.html">Tableau de bord</a></li>
+            <li><a href="./page-medcin.html">Mon profil</a></li>
+            <li><a href="./chat.html?vue=medecin">Chat urgent</a></li>
+            <li><a href="./login.html?role=medecin">Connexion</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Ressources</h4>
+          <ul>
+            <li><a href="./pharmacies.html">Pharmacies</a></li>
+            <li><a href="./hopitaux.html">Hôpitaux</a></li>
+            <li><a href="./medecins.html#avis">Avis</a></li>
+            <li><a href="./index.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <small>© 2025 DocChat Maroc. Tous droits réservés.</small>
+        <div class="legal">
+          <a href="#">Conditions</a><a href="#">Confidentialité</a><a href="#">Cookies</a>
+        </div>
+      </div>
+    </footer>
+
+    <div id="userMenu" class="dropdown" hidden aria-label="Menu utilisateur">
+      <ul>
+        <li class="role-patient"><a href="./page-patient.html">Mon profil patient</a></li>
+        <li class="role-medecin"><a href="./page-medcin.html">Mon profil médecin</a></li>
+        <li><a href="./login.html">Changer de compte</a></li>
+        <li><button id="logoutBtn" class="linklike">Se déconnecter</button></li>
+      </ul>
+    </div>
+
+    <script src="./index.js" defer></script>
+  </body>
+</html>

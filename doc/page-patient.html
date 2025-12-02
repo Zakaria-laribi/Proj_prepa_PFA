@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mon profil patient — DocChat Maroc</title>
+  <link rel="stylesheet" href="page-patient.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Mes informations</h1>
+    <p id="roleWarn" class="warn" hidden>Accès réservé aux patients.</p>
+    <form id="patientForm" class="grid">
+      <div class="field"><label>Nom</label><input id="nom" type="text" required /></div>
+      <div class="field"><label>Email</label><input id="email" type="email" required /></div>
+      <div class="field"><label>Téléphone</label><input id="tel" type="tel" placeholder="+212..." /></div>
+      <div class="field"><label>Ville</label><input id="ville" type="text" /></div>
+      <div class="field"><label>Adresse</label><input id="adresse" type="text" /></div>
+      <button class="btn" type="submit">Enregistrer</button>
+    </form>
+  </main>
+  <script src="page-patient.js" defer></script>
+</body>
+</html>

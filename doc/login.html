@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Connexion / Inscription — DocChat Maroc</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <main class="login-container">
+    <section class="card">
+      <h1>Connexion / Inscription</h1>
+      <form id="loginForm" class="form-grid">
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" required placeholder="vous@exemple.com" />
+        </div>
+        <div class="field">
+          <label for="password">Mot de passe</label>
+          <input type="password" id="password" required placeholder="••••••••" />
+        </div>
+        <div class="field">
+          <label for="role">Rôle</label>
+          <select id="role">
+            <option value="patient">Patient</option>
+            <option value="medecin">Médecin</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Continuer</button>
+        <p class="hint">En continuant, vous acceptez nos conditions.</p>
+      </form>
+    </section>
+  </main>
+  <script src="login.js" defer></script>
+</body>
+</html>
