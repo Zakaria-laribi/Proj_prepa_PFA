@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil Patient - DocChat Maroc</title>
+    <link rel="stylesheet" href="assets/css/home.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">DocChat Maroc</div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-link active">Accueil</a>
+                <a href="#" class="nav-link">Mes consultations</a>
+                <a href="#" class="nav-link">Messages</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème">
+                    <span id="themeIcon">🌙</span>
+                </button>
+                <button class="logout-btn" id="logoutBtn">Déconnexion</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Bienvenue sur DocChat Maroc</h1>
+            <p id="welcomeMessage">Trouvez et consultez un médecin en quelques clics</p>
+            
+            <!-- Barre de recherche -->
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    class="search-input" 
+                    placeholder="Rechercher un médecin, une spécialité..."
+                    id="searchInput"
+                >
+                <button class="search-btn" id="searchBtn">🔍</button>
+            </div>
+
+            <button class="cta-btn" id="ctaConsult">Consulter maintenant</button>
+        </div>
+    </section>
+
+    <!-- Section Médecins Populaires -->
+    <section class="doctors-section">
+        <div class="container">
+            <h2 class="section-title">Médecins populaires</h2>
+            
+            <div class="doctors-grid">
+                <!-- Carte Médecin 1 -->
+                <div class="doctor-card">
+                    <div class="doctor-avatar">👨‍⚕️</div>
+                    <h3 class="doctor-name">Dr. Ahmed Benali</h3>
+                    <p class="doctor-specialty">Cardiologue</p>
+                    <div class="doctor-rating">⭐ 4.8 (156 avis)</div>
+                    <button class="btn-consult">Consulter</button>
+                </div>
+
+                <!-- Carte Médecin 2 -->
+                <div class="doctor-card">
+                    <div class="doctor-avatar">👩‍⚕️</div>
+                    <h3 class="doctor-name">Dr. Fatima Alaoui</h3>
+                    <p class="doctor-specialty">Pédiatre</p>
+                    <div class="doctor-rating">⭐ 4.9 (203 avis)</div>
+                    <button class="btn-consult">Consulter</button>
+                </div>
+
+                <!-- Carte Médecin 3 -->
+                <div class="doctor-card">
+                    <div class="doctor-avatar">👨‍⚕️</div>
+                    <h3 class="doctor-name">Dr. Youssef Tazi</h3>
+                    <p class="doctor-specialty">Dermatologue</p>
+                    <div class="doctor-rating">⭐ 4.7 (142 avis)</div>
+                    <button class="btn-consult">Consulter</button>
+                </div>
+
+                <!-- Carte Médecin 4 -->
+                <div class="doctor-card">
+                    <div class="doctor-avatar">👩‍⚕️</div>
+                    <h3 class="doctor-name">Dr. Amal Idrissi</h3>
+                    <p class="doctor-specialty">Gynécologue</p>
+                    <div class="doctor-rating">⭐ 4.9 (187 avis)</div>
+                    <button class="btn-consult">Consulter</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sections d'information -->
+    <section class="info-sections">
+        <div class="container">
+            <!-- Section 1: Confidentialité -->
+            <div class="info-card">
+                <div class="info-icon">🔒</div>
+                <h3 class="info-title">Confidentialité et vie privée</h3>
+                <p class="info-text">
+                    Vos données médicales sont protégées par un cryptage de niveau bancaire. 
+                    Nous respectons strictement le secret médical et les normes RGPD. 
+                    Seuls vous et votre médecin avez accès à vos informations personnelles. 
+                    Votre confiance est notre priorité absolue.
+                </p>
+            </div>
+
+            <!-- Section 2: Consultation en un clic -->
+            <div class="info-card info-card-reverse">
+                <div class="info-icon">💬</div>
+                <h3 class="info-title">Consultez un médecin en un clic</h3>
+                <p class="info-text">
+                    Plus besoin de vous déplacer ou d'attendre des heures en salle d'attente. 
+                    Avec DocChat Maroc, consultez des médecins qualifiés depuis chez vous, 
+                    à tout moment. Obtenez des conseils médicaux professionnels par chat, 
+                    audio ou vidéo en quelques minutes seulement.
+                </p>
+            </div>
+
+            <!-- Section 3: Qu'est-ce que DocChat -->
+            <div class="info-card">
+                <div class="info-icon">🏥</div>
+                <h3 class="info-title">Qu'est-ce que DocChat Maroc ?</h3>
+                <p class="info-text">
+                    DocChat Maroc est la première plateforme marocaine de télémédecine connectant 
+                    patients et médecins certifiés. Notre mission est de rendre les soins de santé 
+                    accessibles à tous, partout au Maroc. Nous proposons des consultations en ligne 
+                    sécurisées, des ordonnances digitales et un suivi médical personnalisé.
+                </p>
+            </div>
+
+            <!-- Section 4: Comment utiliser -->
+            <div class="info-card info-card-reverse">
+                <div class="info-icon">📱</div>
+                <h3 class="info-title">Comment utiliser les services DocChat ?</h3>
+                <p class="info-text">
+                    C'est simple : créez votre compte, recherchez un médecin par spécialité, 
+                    choisissez un créneau disponible et lancez votre consultation. Vous pouvez 
+                    échanger par message, appel audio ou vidéo. À la fin, recevez votre ordonnance 
+                    et vos recommandations directement sur la plateforme.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>DocChat Maroc</h4>
+                    <p>Votre santé à portée de clic</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens rapides</h4>
+                    <a href="#">À propos</a>
+                    <a href="#">Contact</a>
+                    <a href="#">FAQ</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Légal</h4>
+                    <a href="#">Conditions d'utilisation</a>
+                    <a href="#">Politique de confidentialité</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DocChat Maroc. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Médecin - DocChat Maroc</title>
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/medecin.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">DocChat Maroc</div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-link active">Tableau de bord</a>
+                <a href="#" class="nav-link">Mes patients</a>
+                <a href="#" class="nav-link">Consultations</a>
+                <a href="#" class="nav-link">Messages</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème">
+                    <span id="themeIcon">🌙</span>
+                </button>
+                <button class="logout-btn" id="logoutBtn">Déconnexion</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section Médecin -->
+    <section class="hero hero-medecin">
+        <div class="hero-content">
+            <h1>Bienvenue Dr. <span id="doctorName">Médecin</span></h1>
+            <p>Gérez vos consultations et accompagnez vos patients</p>
+        </div>
+    </section>
+
+    <!-- Dashboard Médecin -->
+    <section class="dashboard-section">
+        <div class="container">
+            <!-- Statistiques rapides -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-info">
+                        <h3 class="stat-number">127</h3>
+                        <p class="stat-label">Patients actifs</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">📅</div>
+                    <div class="stat-info">
+                        <h3 class="stat-number">8</h3>
+                        <p class="stat-label">Consultations aujourd'hui</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">⏰</div>
+                    <div class="stat-info">
+                        <h3 class="stat-number">3</h3>
+                        <p class="stat-label">En attente</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">⭐</div>
+                    <div class="stat-info">
+                        <h3 class="stat-number">4.8</h3>
+                        <p class="stat-label">Note moyenne</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Demandes urgentes et Planning -->
+            <div class="dashboard-grid">
+                <!-- Demandes urgentes -->
+                <div class="dashboard-card urgent-card">
+                    <div class="card-header">
+                        <h3>🚨 Demandes urgentes</h3>
+                        <span class="badge">3 nouvelles</span>
+                    </div>
+                    <div class="urgent-list">
+                        <div class="urgent-item">
+                            <div class="urgent-patient">
+                                <div class="patient-avatar">👤</div>
+                                <div class="patient-info">
+                                    <h4>Mohammed Alami</h4>
+                                    <p>Douleurs thoraciques</p>
+                                </div>
+                            </div>
+                            <button class="btn-respond">Répondre</button>
+                        </div>
+
+                        <div class="urgent-item">
+                            <div class="urgent-patient">
+                                <div class="patient-avatar">👤</div>
+                                <div class="patient-info">
+                                    <h4>Fatima Bennani</h4>
+                                    <p>Fièvre élevée (39°C)</p>
+                                </div>
+                            </div>
+                            <button class="btn-respond">Répondre</button>
+                        </div>
+
+                        <div class="urgent-item">
+                            <div class="urgent-patient">
+                                <div class="patient-avatar">👤</div>
+                                <div class="patient-info">
+                                    <h4>Youssef Tazi</h4>
+                                    <p>Réaction allergique</p>
+                                </div>
+                            </div>
+                            <button class="btn-respond">Répondre</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Planning rapide -->
+                <div class="dashboard-card planning-card">
+                    <div class="card-header">
+                        <h3>📅 Planning d'aujourd'hui</h3>
+                        <span class="date-badge" id="todayDate">Aujourd'hui</span>
+                    </div>
+                    <div class="planning-list">
+                        <div class="planning-item">
+                            <div class="planning-time">09:00</div>
+                            <div class="planning-details">
+                                <h4>Consultation - Ahmed El Idrissi</h4>
+                                <p>Suivi cardiologique</p>
+                            </div>
+                            <span class="status-badge completed">Terminée</span>
+                        </div>
+
+                        <div class="planning-item">
+                            <div class="planning-time">10:30</div>
+                            <div class="planning-details">
+                                <h4>Consultation - Samira Benali</h4>
+                                <p>Consultation générale</p>
+                            </div>
+                            <span class="status-badge completed">Terminée</span>
+                        </div>
+
+                        <div class="planning-item active">
+                            <div class="planning-time">14:00</div>
+                            <div class="planning-details">
+                                <h4>Consultation - Karim Fassi</h4>
+                                <p>Dermatologie</p>
+                            </div>
+                            <span class="status-badge upcoming">À venir</span>
+                        </div>
+
+                        <div class="planning-item">
+                            <div class="planning-time">16:00</div>
+                            <div class="planning-details">
+                                <h4>Consultation - Nadia Bouazza</h4>
+                                <p>Renouvellement ordonnance</p>
+                            </div>
+                            <span class="status-badge upcoming">À venir</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sections d'information (identiques à la page patient) -->
+    <section class="info-sections">
+        <div class="container">
+            <!-- Section 1: Confidentialité -->
+            <div class="info-card">
+                <div class="info-icon">🔒</div>
+                <div class="info-content">
+                    <h3 class="info-title">Confidentialité et vie privée</h3>
+                    <p class="info-text">
+                        Les données de vos patients sont protégées par un cryptage de niveau bancaire. 
+                        Nous respectons strictement le secret médical et les normes RGPD. 
+                        Seuls vous et votre patient avez accès aux informations médicales personnelles. 
+                        Votre confiance et celle de vos patients sont nos priorités absolues.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Section 2: Consultation en un clic -->
+            <div class="info-card info-card-reverse">
+                <div class="info-icon">💬</div>
+                <div class="info-content">
+                    <h3 class="info-title">Consultez vos patients en un clic</h3>
+                    <p class="info-text">
+                        Offrez à vos patients un accès facile et rapide à vos services médicaux. 
+                        Avec DocChat Maroc, réalisez des consultations à distance par chat, audio ou vidéo. 
+                        Gagnez du temps tout en maintenant un suivi de qualité. 
+                        Vos patients vous remercieront pour votre disponibilité.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Section 3: Qu'est-ce que DocChat -->
+            <div class="info-card">
+                <div class="info-icon">🏥</div>
+                <div class="info-content">
+                    <h3 class="info-title">Qu'est-ce que DocChat Maroc ?</h3>
+                    <p class="info-text">
+                        DocChat Maroc est la première plateforme marocaine de télémédecine connectant 
+                        médecins certifiés et patients. Notre mission est de faciliter l'accès aux soins 
+                        de santé partout au Maroc. Nous vous offrons des outils professionnels pour gérer 
+                        vos consultations en ligne, établir des ordonnances digitales et assurer un suivi médical personnalisé.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Section 4: Comment utiliser -->
+            <div class="info-card info-card-reverse">
+                <div class="info-icon">📱</div>
+                <div class="info-content">
+                    <h3 class="info-title">Comment utiliser les services DocChat ?</h3>
+                    <p class="info-text">
+                        Configurez vos disponibilités, acceptez les demandes de consultation et communiquez 
+                        avec vos patients via notre interface sécurisée. Vous pouvez consulter par message, 
+                        appel audio ou vidéo. Rédigez et envoyez des ordonnances digitales directement depuis 
+                        la plateforme. Accédez à l'historique complet de chaque patient en un clic.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>DocChat Maroc</h4>
+                    <p>Votre santé à portée de clic</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Espace Médecin</h4>
+                    <a href="#">Mon profil</a>
+                    <a href="#">Mes disponibilités</a>
+                    <a href="#">Support technique</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Légal</h4>
+                    <a href="#">Conditions d'utilisation</a>
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">Charte médicale</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DocChat Maroc. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/home.js"></script>
+    <script src="assets/js/medecin.js"></script>
+</body>
+</html>
