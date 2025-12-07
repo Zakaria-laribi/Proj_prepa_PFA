@@ -1,0 +1,344 @@
+/* ========== STYLES SPÉCIFIQUES MÉDECIN ========== */
+
+/* Hero Section Médecin */
+.hero-medecin {
+    background: linear-gradient(135deg, #0052a3 0%, #006699 100%);
+    padding: 50px 20px;
+}
+
+/* ========== DASHBOARD SECTION ========== */
+.dashboard-section {
+    padding: 40px 20px;
+    background: var(--bg-main);
+}
+
+/* ========== STATISTIQUES ========== */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.5s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px var(--shadow);
+    border-color: var(--primary);
+}
+
+.stat-icon {
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.stat-info {
+    flex: 1;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 4px;
+}
+
+.stat-label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* ========== DASHBOARD GRID ========== */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.dashboard-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    animation: fadeInUp 0.5s ease;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--border);
+}
+
+.card-header h3 {
+    font-size: 1.3rem;
+    color: var(--text-main);
+}
+
+.badge {
+    background: #dc3545;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.date-badge {
+    background: var(--primary);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* ========== DEMANDES URGENTES ========== */
+.urgent-card {
+    border-left: 4px solid #dc3545;
+}
+
+.urgent-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.urgent-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background: var(--bg-main);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.urgent-item:hover {
+    box-shadow: 0 4px 12px var(--shadow);
+    transform: translateX(4px);
+}
+
+.urgent-patient {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+}
+
+.patient-avatar {
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.patient-info h4 {
+    font-size: 1rem;
+    color: var(--text-main);
+    margin-bottom: 4px;
+}
+
+.patient-info p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.btn-respond {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn-respond:hover {
+    background: #c82333;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+/* ========== PLANNING ========== */
+.planning-card {
+    border-left: 4px solid var(--primary);
+}
+
+.planning-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.planning-item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 16px;
+    align-items: center;
+    padding: 16px;
+    background: var(--bg-main);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.planning-item:hover {
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+.planning-item.active {
+    border-color: var(--primary);
+    background: linear-gradient(to right, var(--bg-main), rgba(0, 102, 204, 0.05));
+}
+
+.planning-time {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--primary);
+    min-width: 60px;
+}
+
+.planning-details h4 {
+    font-size: 0.95rem;
+    color: var(--text-main);
+    margin-bottom: 4px;
+}
+
+.planning-details p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.status-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.status-badge.completed {
+    background: #d4edda;
+    color: #155724;
+}
+
+[data-theme="dark"] .status-badge.completed {
+    background: #1e4620;
+    color: #a3d9a5;
+}
+
+.status-badge.upcoming {
+    background: #fff3cd;
+    color: #856404;
+}
+
+[data-theme="dark"] .status-badge.upcoming {
+    background: #664d03;
+    color: #fff3cd;
+}
+
+/* ========== AJUSTEMENTS INFO SECTIONS ========== */
+.info-content {
+    flex: 1;
+}
+
+/* ========== RESPONSIVE MÉDECIN ========== */
+@media (max-width: 900px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 12px;
+    }
+
+    .stat-card {
+        padding: 16px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .stat-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .dashboard-grid {
+        gap: 20px;
+    }
+
+    .urgent-item {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .urgent-patient {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .planning-item {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 8px;
+    }
+
+    .status-badge {
+        justify-self: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-section {
+        padding: 30px 15px;
+    }
+
+    .card-header {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}

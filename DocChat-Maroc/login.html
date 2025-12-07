@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - DocChat Maroc</title>
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+<body>
+    <div class="login-container">
+        <!-- Toggle Theme -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème">
+            <span id="themeIcon">🌙</span>
+        </button>
+
+        <!-- Carte de connexion -->
+        <div class="login-card">
+            <!-- Header -->
+            <div class="login-header">
+                <div class="logo">DocChat Maroc</div>
+                <p class="subtitle">Connectez-vous à votre espace</p>
+            </div>
+
+            <!-- Formulaire -->
+            <form class="login-form" id="loginForm" novalidate>
+                <!-- Sélecteur de rôle -->
+                <div class="role-selector">
+                    <div class="role-option">
+                        <input type="radio" id="rolePatient" name="role" value="patient" checked>
+                        <label for="rolePatient" class="role-label">👤 Patient</label>
+                    </div>
+                    <div class="role-option">
+                        <input type="radio" id="roleMedecin" name="role" value="medecin">
+                        <label for="roleMedecin" class="role-label">🩺 Médecin</label>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email" class="form-label">Adresse e-mail</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        class="form-input" 
+                        placeholder="exemple@email.com"
+                        aria-describedby="emailError"
+                    >
+                    <div id="emailError" class="error-message" role="alert"></div>
+                </div>
+
+                <!-- Mot de passe -->
+                <div class="form-group">
+                    <label for="password" class="form-label">Mot de passe</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        class="form-input" 
+                        placeholder="••••••••"
+                        aria-describedby="passwordError"
+                    >
+                    <div id="passwordError" class="error-message" role="alert"></div>
+                </div>
+
+                <!-- Bouton de connexion -->
+                <button type="submit" class="login-button">
+                    Se connecter
+                </button>
+            </form>
+
+            <!-- Footer -->
+            <div class="login-footer">
+                <p>Mot de passe oublié ? <a href="#">Réinitialiser</a></p>
+                <p>Pas encore de compte ? <a href="#">S'inscrire</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/login.js"></script>
+</body>
+</html>
