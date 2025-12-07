@@ -1,8 +1,0 @@
-[
-  { "id": 1, "nom": "Pharmacie Centrale", "ville": "Fès", "garde": true },
-  { "id": 2, "nom": "Pharmacie Al Amal", "ville": "Marrakech", "garde": false },
-  { "id": 3, "nom": "Pharmacie Hassan II", "ville": "Rabat", "garde": true },
-  { "id": 4, "nom": "Pharmacie Maarif", "ville": "Casablanca", "garde": false },
-  { "id": 5, "nom": "Pharmacie Agadir Médina", "ville": "Agadir", "garde": true },
-  { "id": 6, "nom": "Pharmacie Tanger Ville", "ville": "Tanger", "garde": false }
-]
